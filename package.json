@@ -1,0 +1,19 @@
+{
+  "name": "osborneclarke-site-builder",
+  "version": "1.0.0",
+  "description": "Builder for Osborne Clarke Website",
+  "author": "",
+  "private": true,
+  "devDependencies": {
+    "grunt": "",
+    "grunt-cli": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-connect": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-sass": "",
+    "grunt-contrib-uglify": "",
+    "grunt-contrib-watch": "",
+    "grunt-include-replace": ""
+  }
+}

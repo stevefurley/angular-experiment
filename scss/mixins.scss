@@ -1,0 +1,111 @@
+$red: #B40000;
+
+.inner {
+  max-width: 1400px;
+  padding: 15px;
+  margin: auto;
+}
+$tablet: "only screen and (min-width : 767px)";
+.banner.ng-anchor {
+  /* this animation will last for 1 second since there are
+         two phases to the animation (an `in` and an `out` phase) */
+//  transition:0.2s linear all;
+}
+
+
+.animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.view-animation.ng-enter, .view-animation.ng-leave {
+  transition: all 0.6s linear;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+}
+
+
+body > .view-animation.ng-leave   {
+ @extend .animated;
+ @extend .fadeIn;
+}
+
+body > .view-animation.ng-leave.swipe-left {
+  @extend .animated;
+  @extend .slideOutLeft;
+}
+
+body > .view-animation.ng-leave.swipe-left  + .view-animation.ng-enter {
+ @extend .animated;
+ @extend .slideInRight;
+}
+
+
+body > .view-animation.ng-leave.swipe-right {
+  @extend .animated;
+  @extend .slideOutRight;
+}
+
+body > .view-animation.ng-leave.swipe-right  + .view-animation.ng-enter {
+ @extend .animated;
+ @extend .slideInLeft;
+}
+
+
+
+
+
+
+body > .view-animation.ng-leave.swipe-left-button {
+  @extend .animated;
+  @extend .slideOutLeft;
+}
+
+body > .view-animation.ng-leave.swipe-left-button  + .view-animation.ng-enter {
+ @extend .animated;
+ @extend .slideInRight;
+}
+
+
+body > .view-animation.ng-leave.swipe-right-button {
+  @extend .animated;
+  @extend .slideOutRight;
+}
+
+body > .view-animation.ng-leave.swipe-right-button  + .view-animation.ng-enter {
+ @extend .animated;
+ @extend .slideInLeft;
+}
+
+//
+// .view-animation + .view-animation.ng-enter {
+//   @extend .animated;
+//     //@extend .hinge;
+//     &.slide-in-right {
+//       @extend .slideInRight;
+//         @extend .animated;
+//     }
+//     &.slide-in-left {
+//       @extend .slideInLeft;
+//         @extend .animated;
+//     }
+// }
+//
+// //goes away
+// .ng-leave.ng-leave-active {
+//
+//   @extend .animated;
+//   &.slide-in-right {
+//     @extend .slideOutLeft;
+//       @extend .animated;
+//   }
+//   &.slide-in-left {
+//     @extend .slideOutRight;
+//       @extend .animated;
+//   }
+// }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+
+  <!-- Meta-Information -->
+  <title>MX vice</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="ACME Inc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+  <!-- Our Website CSS Styles -->
+  <link rel="stylesheet" href="css/main.css">
+  <script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+  ':35729/livereload.js?snipver=1"></' + 'script>')
+  </script>
+  <base href="/">
+</head>
+<body ng-app="tutorialWebApp" ng-controller="PageCtrl">
+
+  <!-- Our Website Content Goes Here -->
+  <header>
+    <div ng-include='"templates/header.html"'></div>
+  </header>
+
+  <div class='main-content view-animation' ng-class="slideDir" ng-view  ng-swipe-left="swipeLeft()" ng-swipe-right="swipeRight()" >
+
+  </div>
+  <div class='mini-nav' ng-include='"templates/min_nav.html"'></div>
+
+
+  <!-- Vendor: Angular, followed by our custom Javascripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-touch.js"></script>
+  <script src="js/angular-scroll-spy.js"></script>
+  <script src="js/countUp.min.js"></script>
+
+  <script src="js/ng-countUp.js"></script>
+
+  <!-- Our Website Javascripts -->
+  <script src="js/main.js"></script>
+
+
+
+</body>
+</html>

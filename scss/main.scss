@@ -1,0 +1,169 @@
+@import "animations";
+@import "mixins";
+
+body {
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.slide .inner img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 26px;
+  font-size: 20px;
+}
+
+
+header {
+  //background: 	rgba(255,255,255, 0.8);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+footer {
+  background: lightgrey;
+
+}
+
+.main-content {
+  min-height:100vh;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 26px;
+  color: white;
+  .slide {
+    min-height:100vh;
+  }
+  .inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+
+}
+
+.slide1 {
+  background: url("/images/bg1-mob.jpg")no-repeat center center /cover ;
+
+  @media #{$tablet} {
+    background: url("/images/bg1.jpg") no-repeat center center /cover;
+  }
+}
+
+.slide2  {
+  background: url("/images/bg2-mob.jpg") no-repeat center center /cover ;
+  @media #{$tablet} {
+    background: url("/images/bg2.jpg") no-repeat center center /cover ;
+  }
+}
+
+.slide3 {
+  background: url("/images/bg3-mob.jpg") no-repeat center center /cover ;
+  @media #{$tablet} {
+    background: url("/images/bg3.jpg") no-repeat center center /cover ;
+  }
+}
+
+.slide4 {
+  background: url("/images/bg4-mob.jpg") no-repeat center center /cover ;
+  @media #{$tablet} {
+    background: url("/images/bg4.jpg") no-repeat center center /cover ;
+  }
+}
+
+.slide5 {
+  background: url("/images/bg5-mob.jpg") no-repeat center center /cover ;
+  @media #{$tablet} {
+    background: url("/images/bg5.jpg") no-repeat center center /cover ;
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height:100%;
+  width: 100%;
+
+  background: linear-gradient(180deg,  #000 49%,  transparent 65%  );
+  opacity: 0.8;
+}
+
+.mini-nav {
+  position: fixed;
+  bottom: 10px;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  margin: auto;
+  ul {
+    display: block;
+    text-align: center;
+    padding: 0;
+    li {
+      display: inline-block;
+      &.clicked,
+      &.active a{
+        background: $red;
+        border: 2px white solid;
+      }
+      a {
+        font-size: 0;
+        border: 2px transparent solid;
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 100%;
+        margin: 0 7.5px;
+      }
+    }
+  }
+}
+
+.counting {
+  span {
+    &.name {
+      font-size: 30px;
+      width: 150px;
+      display: inline-block;
+    }
+  }
+}
+
+.gallery {
+  img {
+    width: 20%;
+    float: left;
+  }
+}
